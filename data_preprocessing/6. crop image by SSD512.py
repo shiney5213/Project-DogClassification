@@ -67,14 +67,6 @@ ssd_loss = SSDLoss(neg_pos_ratio=3, alpha=1.0)
 model.compile(optimizer=adam, loss=ssd_loss.compute_loss)
 
 
-# Paths of input and output inages
-input_image_path = 'ssd512/inputs/images'
-output_image_path = 'ssd512/outputs/images'
-
-# Paths of input and output videos
-# input_video_path = 'inputs/videos'
-# output_video_path = 'outputs/videos'
-
 # Transforming image size
 def transform(input_image):
 	return cv2.resize(input_image, (512, 512), interpolation = cv2.INTER_CUBIC)
@@ -146,7 +138,7 @@ def detect_object(copy_image, dog_name, file):
 
 base_path = '../data/'
 old_dir = os.path.join(base_path, '5.merge(stanfold,identification,crawling)_120').replace('\\','/')
-new_dir = '../data/6.image crop by YOLO3'
+new_dir = '../data/7.image crop by ssd512'
 
 
 dogs_dir = os.listdir(old_dir)
