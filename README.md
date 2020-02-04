@@ -21,6 +21,14 @@
 * [4.Check valid images]
 * [5.Image crop by Yolo3]
    *  cfg, weight download: [YOLOv3-416](https://pjreddie.com/darknet/yolo/)
-*  [6.Image crop by Photoshop]
+* [6.Image crop by SSD512]
+   * weight download: [pretrained weight](https://drive.google.com/file/d/1a-64b6y6xsQr5puUsHX_wxI1orQDercM/view)
 *  [7.Split images trainset and testset]
 *  
+
+
+
+## Reference
+
+- [SSD-Object-Detection](https://github.com/InsiderPants/SSD-Object-Detection)
+
