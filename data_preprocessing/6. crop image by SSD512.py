@@ -78,7 +78,7 @@ def detect_object(copy_image, dog_name, file):
 	input_image = np.reshape(input_image, (1, 512, 512, 3))
 	y_pred = model.predict(input_image)
 	actual_prediction = [y_pred[k][y_pred[k,:,1] > confidence_threshold] for k in range(y_pred.shape[0])]
-
+	
 	for i,box in enumerate(actual_prediction[0]):
 		# print(box)
 		# Coordinates of diagonal points of bounding box
@@ -156,9 +156,10 @@ for root, dirs, files in os.walk(old_dir):
 	for file in files:		
 		input_image_path = os.path.join(root, file)
 		original_image = cv2.imread(input_image_path, 1)
-		original_image= cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB)
-		copy_image = original_image.copy()
 		if original_image is not None:
+
+			original_image= cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB)
+			copy_image = original_image.copy()
 			detect_object(copy_image, dog_name, file)	# detecting objects
 
 		
