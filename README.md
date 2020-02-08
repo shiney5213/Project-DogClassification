@@ -37,11 +37,14 @@
 #### 6. 위의 5,6의 데이터셋을 합친 후, 잘 자라진 이미지만 선택, deteching 못한 이미지는 수작업으로 잘라 모두  장의 이미지 데이터셋 완성
 
 - SSD512모델이 YOLO3보다 느리지만, 성능이 좋다고 알려져있는데,  이 데이터셋에서는 YOLO3가 더 좋은 것 같음. 
-- ![compare datasets](images/compare yolo, ssd.png)
-      
 
+  ![compare datasets](images/compare yolo, ssd.png)
+  <img src="images/images/compare yolo, ssd.png" alt="compare datasets" style="zoom:48%;" />
+
+* 
+* 
+* 
 * [7.Split images trainset and testset]
-
 *  
 
 
