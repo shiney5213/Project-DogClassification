@@ -39,7 +39,7 @@
 - SSD512모델이 YOLO3보다 느리지만, 성능이 좋다고 알려져있는데,  이 데이터셋에서는 YOLO3가 더 좋은 것 같음. 
 
   ![compare datasets](images/compare_yolo,ssd.png)
-  <img src="images/compare_yolo,ssd.png" alt="compare datasets" style="zoom:48%;" />
+  
 
 * 
 * 
