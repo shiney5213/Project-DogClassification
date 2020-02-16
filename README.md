@@ -34,18 +34,48 @@
 - weight download: [pretrained weight](https://drive.google.com/file/d/1a-64b6y6xsQr5puUsHX_wxI1orQDercM/view)
 - SSD512 모델을 이용하여  dog로 deteching 한 box만 잘른 결과 모두 39,282장 이미지 모음
   
-#### 6. 위의 5,6의 데이터셋을 합친 후, 잘 자라진 이미지만 선택, deteching 못한 이미지는 수작업으로 잘라 모두  장의 이미지 데이터셋 완성
+#### 6. Merge images 
+
+#### 	- 위의 5,6의 데이터셋을 합친 후, 잘 자라진 이미지만 선택, deteching 못한 이미지는 수작업으로 잘라 모두  장의 이미지 데이터셋 완성
 
 - SSD512모델이 YOLO3보다 느리지만, 성능이 좋다고 알려져있는데,  이 데이터셋에서는 YOLO3가 더 좋은 것 같음. 
 
   ![compare datasets](images/compare_yolo,ssd.png)
   
 
-* 
-* 
-* 
+	- 제일 위에서부터 원본, yolo3 결과, SSD512 결과
 * [7.Split images trainset and testset]
-*  
+	- 전체 데이터를 train(0.8), test set(0.2)으로 나눔( train set:  23,921장, test set: 4,149 장)
+  - 전체 데이터 수가 200장이 안되는 강아지 : 추후 모델링 결과를 살펴보고 데이터셋 추가 확보 여부 결정
+	 <img src = 'images/under200.png' width = 300px>
+
+## train/ test
+
+#### [train_1]() : 
+- parameter
+|parameter | setting | ImageGenerator  | setting| test  | result |
+| ---------- | -------- | ---------- | -------- | ---------- | ------- |
+| base_model| inceptionV3| preprocessing  | inceptionV3 | num_classes| 121 |
+| input_size | 299 * 299 | rotation_range | 30  | num_samples | 4,149|
+| batch_size | 32| width_shift_range | 0.2  |  | |
+| EPOCH | 15 | height_shift_range  | 0.2  |lfw | 0.9705 |
+| optimizer  | Adam| validation_split  | 0.15  | AgeDB-30 | 0.8560|
+| leraning_rate | .0001| horizontal_flip  | true  | CFP-FP | 0.8817 |
+| num_class | 121| interpolation | nearest  | k-face | 90  |
+|  num_samples | 23,921 |
+-  model
+```
+base_model = InceptionV3(weights='imagenet', include_top = False, input_shape=(299, 299, 3))
+out = base_model.output
+out = Flatten()(out)
+out = Dense(512, activation='relu')(out)
+out = Dense(512, activation='relu')(out)
+total_classes = train_generator.num_classes
+predictions = Dense(total_classes, activation='softmax')(out)
+model = Model(inputs=base_model.input, outputs=predictions)
+```
+- history
+- result
 
 
 
