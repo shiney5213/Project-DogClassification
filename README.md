@@ -53,6 +53,9 @@
 - epoch 4~5부터 overfitting 발생
 - dropout, Regularization, 모델의 복잡도를 줄이는 방법 등을 적용해봐야겠음.
 
+#### 2. [train_2](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C%20test/200218_train_1.py) : [accuracy_](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C%20test/1.%20train_2.md)
+- train_1의 overfitting문제를 해결하기 위해 drop out layer(0.5)추가
+
 
 
 ---
