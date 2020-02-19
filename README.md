@@ -41,7 +41,7 @@
 - deteching 못한 이미지는 수작업으로 잘라 모두 35,176장의 이미지 데이터셋 완성
 - SSD512모델이 YOLO3보다 느리지만, 성능이 좋다고 알려져있는데,  이 데이터셋에서는 YOLO3가 더 좋은 것 같음. 
 
-#### 7. [Split images trainset and testset]
+#### 7. [Split images trainset and testset]()
 - 전체 데이터를 train(0.8), test set(0.2)으로 나눔( train set:  28,070장, test set: 7,106장)
 - 전체 데이터 수가 200장이 안되는 강아지 : 추후 모델링 결과를 살펴보고 데이터셋 추가 확보 여부 결정
 
@@ -53,8 +53,10 @@
 - epoch 4~5부터 overfitting 발생
 - dropout, Regularization, 모델의 복잡도를 줄이는 방법 등을 적용해봐야겠음.
 
-#### 2. [train_2](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C%20test/200218_train_1.py) : [accuracy_](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C%20test/1.%20train_2.md)
-- train_1의 overfitting문제를 해결하기 위해 drop out layer(0.5)추가
+#### 2. [train_2](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C%20test/200218_train_1.py) : [accuracy : 72.38%](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C%20test/1.%20train_2.md)
+- train_1의 overfitting문제를 해결하기 위해 dropout layer(0.5)추가
+- train_1보다 정확도는 낮게 나왔지만, 오버피팅이 개선되었음.
+- Confusion Metrics, Precision, Recall 등의 다양한 평가 지표를 보면서 모델을 개선해야겠음.
 
 
 
