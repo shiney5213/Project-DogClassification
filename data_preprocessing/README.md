@@ -39,4 +39,4 @@
 
 - 전체 데이터를 train(0.8), test set(0.2)으로 나눔( train set:  23,921장, test set: 4,149 장)
 - 전체 데이터 수가 200장이 안되는 강아지 : 추후 모델링 결과를 살펴보고 데이터셋 추가 확보 여부 결정 예정
- <img src = 'images/under200.png' width = 300px>
+- ![under200](images/under200.png)
