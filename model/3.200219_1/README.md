@@ -12,7 +12,7 @@
 
 |parameter | setting | ImageGenerator  | setting| test  | result |
 | ---------- | -------- | ---------- | -------- | ---------- | ------- |
-| base_model| inceptionV3| preprocessing  | inceptionResnetV3 | proper_epoch | 15 |
+| base_model| inceptionV3| preprocessing  | inceptionResnetV3 | proper_epoch | 15 이후 |
 | input_size | 299 * 299 | rotation_range | 30 | min_val_loss | 4.68863 |
 | batch_size | 32| width_shift_range | 0.2  | accuracy | 1.97% |
 | epoch | 15 | height_shift_range  | 0.2  | |  |
@@ -30,7 +30,6 @@
   base_model = InceptionResnetV2(weights='imagenet', include_top = False, input_shape=(299, 299, 3))
           out = base_model.output
           out = Flatten()(out)
-          # out = GlobalAveragePooling2D()(out)
           out = Dense(512, activation='relu')(out)
           out = Dropout(0.5)(out)
           out = Dense(512, activation='relu')(out)
@@ -52,6 +51,8 @@
 ![200219_1](images/200219_1.png)
 
 - Loss가 줄어들고 있으나 accuracy는 거의 증가하지 않음. 
-- @@@@@@@@@@@@@@@@@@@@@@@@@@
+- 학습은 되고 있으니 epoch를 증가시켜볼까 생각했었으나, 이대로라면 epoch를 증가시켜도 accuracy가 크게 향상될 것 같이 않음.
 #### 5. Plan
+
+- 현재 optimizer를 Adam을 상요하고 있는데, 다른 optimizer를 찾아서 적용해봐야겠음.
 
