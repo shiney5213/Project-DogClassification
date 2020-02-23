@@ -48,7 +48,7 @@
 ---
 ## train/ test
 
-#### 1.  [1st_train](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C%20test/200216_train_1.py](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C test/200216_train_1.py)) : [accuracy 75.94%](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C test/1. train_1.md)
+#### 1.  [1st_train](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C test/200216_train_1.py) : [accuracy 75.94%](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C test/1. train_1.md)
 - keras의 inceptionV3 모델을 pretrain model로 사용
 - epoch 4~5부터 overfitting 발생
 - dropout, Regularization, 모델의 복잡도를 줄이는 방법 등을 적용해봐야겠음.
@@ -58,12 +58,12 @@
 - train_1보다 정확도는 낮게 나왔지만, 오버피팅이 개선되었음.
 - Confusion Metrics, Precision, Recall 등의 다양한 평가 지표를 보면서 모델을 개선해야겠음.
 
-#### 3. [3th_train](https://github.com/shiney5213/Project-DogClassification/blob/master/model/3.200219_1/200219_train_1.py) : accuracy: 1.97%(https://github.com/shiney5213/Project-DogClassification/blob/master/model/3.200219_1/README.md)
+#### 3. [3th_train](https://github.com/shiney5213/Project-DogClassification/blob/master/model/3.200219_1/200219_train_1.py) : accuracy: 1.97%https://github.com/shiney5213/Project-DogClassification/blob/master/model/3.200219_1/README.md)
 - 모델을 InceptionResnetV2로 바꾼 후, 성능이 너무 낮아짐. 
 - loss는 계속 낮아지는 것으로 보아, 학습은 진행 중이지만, 성능이 개선되지 않음.
 - local minima에 빠진 것으로 판단되어, optimizer을 바꾸어 진행해보기로 함.
 
-#### 4. [4th_train](https://github.com/shiney5213/Project-DogClassification/blob/master/model/4.200223_1/200223_train_1.py) : accuracy: 2.60%(https://github.com/shiney5213/Project-DogClassification/tree/master/model/4.200223_1)
+#### 4. [4th_train](https://github.com/shiney5213/Project-DogClassification/blob/master/model/4.200223_1/200223_train_1.py) : accuracy: 2.60%https://github.com/shiney5213/Project-DogClassification/tree/master/model/4.200223_1)
 - optimiser을 Adam에서 Rdam으로 바꾸어 진행
 - 성능이 크게 좋아지지 않음.
 - 모델의 구조를 조금씩 변경해보고, 성능이 나아지지 않으면 다시 InceptionV3모델을 사용해야겠음.
