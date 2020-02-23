@@ -48,12 +48,12 @@
 ---
 ## train/ test
 
-#### 1.  [1st_train](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C test/200216_train_1.py) : [accuracy 75.94%](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C test/1. train_1.md)
+#### 1.  [1st_train](https://github.com/shiney5213/Project-DogClassification/blob/master/model/1.200216_1/200216_train_1.py) : [accuracy 75.94%](https://github.com/shiney5213/Project-DogClassification/blob/master/model/1.200216_1/README.md)
 - keras의 inceptionV3 모델을 pretrain model로 사용
 - epoch 4~5부터 overfitting 발생
 - dropout, Regularization, 모델의 복잡도를 줄이는 방법 등을 적용해봐야겠음.
 
-#### 2. [2nd_train](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C%20test/200218_train_1.py) : [accuracy : 72.38%](https://github.com/shiney5213/Project-DogClassification/blob/master/train%2C%20test/1.%20train_2.md)
+#### 2. [2nd_train](https://github.com/shiney5213/Project-DogClassification/blob/master/model/1.200218_1/200218_train_1.py) : [accuracy : 72.38%](https://github.com/shiney5213/Project-DogClassification/blob/master/model/1.200218_1/README.md)
 - train_1의 overfitting문제를 해결하기 위해 dropout layer(0.5)추가
 - train_1보다 정확도는 낮게 나왔지만, 오버피팅이 개선되었음.
 - Confusion Metrics, Precision, Recall 등의 다양한 평가 지표를 보면서 모델을 개선해야겠음.
