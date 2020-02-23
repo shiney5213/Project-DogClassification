@@ -16,23 +16,23 @@
 
 >  Making a dataset based on the dog breed standard of the Korean Dog Association
 >  
-#### 1. [Dog Breed Identification data set](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/1.Dividing Identification_datasets by directory.ipynb) 
+#### 1. [Dog Breed Identification data set](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/1.Dividing_Identification_datasets_by_directory.ipynb) 
 - 데이터셋이 이미지와 라벨 text문서가  따로 있기 때문에, 품종별 폴더에 이미지 라벨별로 나누는 작업 진행
 
-#### 2. [Merge datasets and Crawrling](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/2.Merging Stanford Dogs Dataset and Dog Breed Idntification.ipynb)
+#### 2. [Merge datasets and Crawrling](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/2.Merging_Stanford_Dogs_Dataset_and_Dog_Breed_Idntification.ipynb)
 - Dog Breed Identification, Stanford Dogs Dataset 같은 품종끼리 합치기
 - 한국 애견 협회 품종 기준으로 위의 데이터 셋에 없는 품종은 크롤링하여 데이터 수집
 
-#### 3. [Check valid images](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/4.checking valid Image_file.ipynb)
+#### 3. [Check valid images](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/4.checking_valid_Image_file.ipynb)
 - 이미지 중 오류가 있는 이미지가 있는지 확인
 - 사용할 수 없는 이미지 처리
 
-#### 4.[ Image crop by YOLO3](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/5. Image crop by Yolo3.ipynb)
+#### 4.[ Image crop by YOLO3](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/5.Image_crop_by_Yolo3.ipynb)
 - 이미지 중 사람과 같이 찍거나, 두마리가 있거나, 강아지가 너무 작은 사진 등 학습에 적합하지 않은 이미지가 많음.
 - YOLO3 모델을 이용하여  dog로 deteching 한 box만 잘른 결과 모두 34,767장 이미지 모음
 - reference: : [darknet](https://pjreddie.com/darknet/) 참고
 
-#### 5. [Image crop by SSD512](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/6. crop image by SSD512.py)
+#### 5. [Image crop by SSD512](https://github.com/shiney5213/Project-DogClassification/blob/master/data_preprocessing/6.crop_image_by_SSD512.py)
 - weight download: [pretrained weight](https://drive.google.com/file/d/1a-64b6y6xsQr5puUsHX_wxI1orQDercM/view)
 - SSD512 모델을 이용하여  dog로 deteching 한 box만 잘른 결과 모두 39,282장 이미지 모음
 - reference: [SSD-Object-Detection](https://github.com/InsiderPants/SSD-Object-Detection)
